@@ -1,0 +1,255 @@
+theme: jekyll-theme-minimal
+title: My Portfolio Website
+description: Welcome to my professional portfolio!
+
+<h2 class="sr-only">Alexandre Francois Bagtasos — Executive Virtual Assistant portfolio page</h2>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.hero{padding:2.5rem 1.5rem 2rem;text-align:center;border-bottom:0.5px solid var(--color-border-tertiary)}
+.avatar{width:80px;height:80px;border-radius:50%;background:var(--color-background-info);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:500;color:var(--color-text-info);margin:0 auto 1rem}
+.hero h1{font-size:22px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.hero .role{font-size:15px;color:var(--color-text-info);font-weight:500;margin-bottom:12px}
+.hero .location{font-size:13px;color:var(--color-text-secondary);margin-bottom:1.25rem}
+.contact-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:1.25rem}
+.contact-pill{display:flex;align-items:center;gap:6px;padding:5px 12px;border:0.5px solid var(--color-border-secondary);border-radius:99px;font-size:12px;color:var(--color-text-secondary);text-decoration:none}
+.contact-pill i{font-size:14px}
+.badge-row{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.badge{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;padding:4px 10px;border-radius:99px}
+.badge-avail{background:var(--color-background-success);color:var(--color-text-success)}
+.badge-tz{background:var(--color-background-secondary);color:var(--color-text-secondary)}
+
+.section{padding:1.5rem 1.5rem 0}
+.section-title{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-tertiary);margin-bottom:1rem;padding-bottom:8px;border-bottom:0.5px solid var(--color-border-tertiary)}
+
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:1.5rem}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:14px 12px;text-align:center}
+.stat-num{font-size:24px;font-weight:500;color:var(--color-text-primary)}
+.stat-lbl{font-size:12px;color:var(--color-text-secondary);margin-top:3px}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:1.5rem}
+.skill-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:14px}
+.skill-card-title{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.skill-card-title i{font-size:16px;color:var(--color-text-info)}
+.skill-tags{display:flex;flex-wrap:wrap;gap:5px}
+.skill-tag{font-size:11px;padding:3px 8px;border-radius:99px;background:var(--color-background-secondary);color:var(--color-text-secondary)}
+
+.exp-list{margin-bottom:1.5rem}
+.exp-item{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:14px 16px;margin-bottom:10px}
+.exp-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:4px}
+.exp-title{font-size:14px;font-weight:500;color:var(--color-text-primary)}
+.exp-date{font-size:11px;color:var(--color-text-tertiary);white-space:nowrap;flex-shrink:0;margin-top:2px}
+.exp-company{font-size:12px;color:var(--color-text-info);margin-bottom:8px}
+.exp-bullets{list-style:none;padding:0}
+.exp-bullets li{font-size:13px;color:var(--color-text-secondary);padding:3px 0 3px 14px;position:relative;line-height:1.5}
+.exp-bullets li::before{content:"•";position:absolute;left:0;color:var(--color-text-tertiary)}
+
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin-bottom:1.5rem}
+.tool-pill{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 8px;text-align:center;font-size:12px;color:var(--color-text-secondary)}
+.tool-pill i{display:block;font-size:20px;color:var(--color-text-info);margin-bottom:5px}
+.tool-pill.ai i{color:var(--color-text-success)}
+
+.offer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:1.5rem}
+.offer-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:14px}
+.offer-icon{font-size:22px;color:var(--color-text-info);margin-bottom:8px}
+.offer-title{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.offer-desc{font-size:12px;color:var(--color-text-secondary);line-height:1.5}
+
+.cta{padding:1.5rem;text-align:center;border-top:0.5px solid var(--color-border-tertiary);margin-top:1rem}
+.cta-title{font-size:16px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px}
+.cta-sub{font-size:13px;color:var(--color-text-secondary);margin-bottom:1.25rem}
+.cta-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:var(--border-radius-md);background:var(--color-background-info);color:var(--color-text-info);font-size:13px;font-weight:500;border:none;cursor:pointer}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:var(--border-radius-md);background:none;color:var(--color-text-secondary);font-size:13px;border:0.5px solid var(--color-border-secondary);cursor:pointer}
+</style>
+
+<div class="hero">
+  <div class="avatar">AF</div>
+  <h1>Alexandre François Bagtasos</h1>
+  <div class="role">Executive Virtual Assistant</div>
+  <div class="location"><i class="ti ti-map-pin" aria-hidden="true" style="font-size:13px;vertical-align:-1px;margin-right:3px"></i>Davao City, Philippines</div>
+  <div class="contact-row">
+    <a class="contact-pill" href="mailto:francoisbagtasos@gmail.com"><i class="ti ti-mail" aria-hidden="true"></i>francoisbagtasos@gmail.com</a>
+    <a class="contact-pill" href="tel:+639389698446"><i class="ti ti-phone" aria-hidden="true"></i>+63 938-969-8446</a>
+    <a class="contact-pill" href="https://linkedin.com/in/francoisbagtasos"><i class="ti ti-brand-linkedin" aria-hidden="true"></i>LinkedIn</a>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-avail"><i class="ti ti-circle-check" aria-hidden="true" style="font-size:13px"></i>Available now</span>
+    <span class="badge badge-tz"><i class="ti ti-world" aria-hidden="true" style="font-size:13px"></i>US · AU · UK timezones</span>
+    <span class="badge badge-tz"><i class="ti ti-clock" aria-hidden="true" style="font-size:13px"></i>Full-time remote</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">At a glance</div>
+  <div class="stats-grid">
+    <div class="stat"><div class="stat-num">98%</div><div class="stat-lbl">Accuracy rate</div></div>
+    <div class="stat"><div class="stat-num">95%+</div><div class="stat-lbl">Satisfaction scores</div></div>
+    <div class="stat"><div class="stat-num">Top 10%</div><div class="stat-lbl">Agent ranking</div></div>
+    <div class="stat"><div class="stat-num">2+ yrs</div><div class="stat-lbl">Professional exp.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">What I offer</div>
+  <div class="offer-grid">
+    <div class="offer-card">
+      <div class="offer-icon"><i class="ti ti-calendar-event" aria-hidden="true"></i></div>
+      <div class="offer-title">Calendar management</div>
+      <div class="offer-desc">Time-blocking, scheduling, meeting prep, travel coordination and buffer planning.</div>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon"><i class="ti ti-inbox" aria-hidden="true"></i></div>
+      <div class="offer-title">Inbox & email</div>
+      <div class="offer-desc">Triage, drafting, filtering and managing high-volume executive email.</div>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon"><i class="ti ti-layout-dashboard" aria-hidden="true"></i></div>
+      <div class="offer-title">CEO dashboard</div>
+      <div class="offer-desc">Live task tracker, project status, deadlines and action items in one place.</div>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon"><i class="ti ti-folder-open" aria-hidden="true"></i></div>
+      <div class="offer-title">File & task management</div>
+      <div class="offer-desc">Organized cloud filing, version control, task tracking and follow-ups.</div>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
+      <div class="offer-title">AI-powered support</div>
+      <div class="offer-desc">Faster briefings, summaries, drafts and research using Claude and ChatGPT.</div>
+    </div>
+    <div class="offer-card">
+      <div class="offer-icon"><i class="ti ti-lock" aria-hidden="true"></i></div>
+      <div class="offer-title">Discretion & trust</div>
+      <div class="offer-desc">HIPAA-trained. Handles sensitive information with full confidentiality.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Tools & technology</div>
+  <div class="tools-grid">
+    <div class="tool-pill"><i class="ti ti-brand-google" aria-hidden="true"></i>Google Workspace</div>
+    <div class="tool-pill"><i class="ti ti-notebook" aria-hidden="true"></i>Notion</div>
+    <div class="tool-pill"><i class="ti ti-brand-slack" aria-hidden="true"></i>Slack</div>
+    <div class="tool-pill"><i class="ti ti-video" aria-hidden="true"></i>Zoom</div>
+    <div class="tool-pill"><i class="ti ti-calendar-time" aria-hidden="true"></i>Calendly</div>
+    <div class="tool-pill"><i class="ti ti-layout-kanban" aria-hidden="true"></i>Asana / Trello</div>
+    <div class="tool-pill"><i class="ti ti-table" aria-hidden="true"></i>Microsoft 365</div>
+    <div class="tool-pill"><i class="ti ti-database" aria-hidden="true"></i>CRM Systems</div>
+    <div class="tool-pill ai"><i class="ti ti-sparkles" aria-hidden="true"></i>Claude AI</div>
+    <div class="tool-pill ai"><i class="ti ti-robot" aria-hidden="true"></i>ChatGPT</div>
+    <div class="tool-pill ai"><i class="ti ti-microphone" aria-hidden="true"></i>Otter.ai</div>
+    <div class="tool-pill ai"><i class="ti ti-bolt" aria-hidden="true"></i>Zapier / Make</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Core skills</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-title"><i class="ti ti-user-check" aria-hidden="true"></i>Executive support</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Calendar mgmt</span>
+        <span class="skill-tag">Inbox triage</span>
+        <span class="skill-tag">Travel planning</span>
+        <span class="skill-tag">Meeting prep</span>
+        <span class="skill-tag">Briefing docs</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title"><i class="ti ti-list-check" aria-hidden="true"></i>Organization</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Task tracking</span>
+        <span class="skill-tag">File systems</span>
+        <span class="skill-tag">CEO dashboard</span>
+        <span class="skill-tag">Follow-ups</span>
+        <span class="skill-tag">SOPs</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title"><i class="ti ti-messages" aria-hidden="true"></i>Communication</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Email drafting</span>
+        <span class="skill-tag">Stakeholder mgmt</span>
+        <span class="skill-tag">Ghostwriting</span>
+        <span class="skill-tag">Reporting</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title"><i class="ti ti-brain" aria-hidden="true"></i>Mindset</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Anticipation</span>
+        <span class="skill-tag">Discretion</span>
+        <span class="skill-tag">Proactive</span>
+        <span class="skill-tag">Detail-oriented</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Experience</div>
+  <div class="exp-list">
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Customer Service Representative — Healthcare</div>
+        <div class="exp-date">Oct 2025 – Jan 2026</div>
+      </div>
+      <div class="exp-company">Optum Global Advantage (UnitedHealthcare) · Davao City</div>
+      <ul class="exp-bullets">
+        <li>98% accuracy in billing & account resolutions — zero compliance breaches</li>
+        <li>Reduced average handling time by 12% while maintaining 95%+ satisfaction scores</li>
+        <li>Navigated multiple CRM systems simultaneously, mirroring EVA multi-tool demands</li>
+        <li>Maintained audit-ready documentation across all interactions</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Customer Service Representative — Healthcare</div>
+        <div class="exp-date">Aug 2024 – Jan 2025</div>
+      </div>
+      <div class="exp-company">Ibex (UnitedHealthcare) · Davao City</div>
+      <ul class="exp-bullets">
+        <li>Ranked top 10% of agents — 90% first-contact resolution rate</li>
+        <li>Contributed to 15% workflow efficiency improvement through process streamlining</li>
+        <li>Handled sensitive health data in strict HIPAA compliance</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-title">Customer Service Representative — Events & Ticketing</div>
+        <div class="exp-date">Mar 2024 – Jul 2024</div>
+      </div>
+      <div class="exp-company">Alorica (Vivid Seats) · Davao City</div>
+      <ul class="exp-bullets">
+        <li>Maintained 97%+ QA scores and reduced escalations by 20%</li>
+        <li>Increased repeat customer rate by 10% through personalized service</li>
+        <li>Processed high-volume transactions accurately under time pressure</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="exp-item" style="margin-bottom:1.5rem">
+    <div class="exp-header">
+      <div class="exp-title">BS Hospitality Management</div>
+      <div class="exp-date">2022 – 2024</div>
+    </div>
+    <div class="exp-company">University of Mindanao · Davao City</div>
+    <ul class="exp-bullets">
+      <li>Operations Management · Business Communication · Event Coordination · Front Office Management</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="cta-title">Ready to support your executive goals</div>
+  <div class="cta-sub">Available immediately · Full-time remote · US, AU & UK timezones</div>
+  <div class="cta-btns">
+    <button class="btn-primary" onclick="sendPrompt('Help me write a cover letter for Alexandre to send along with this portfolio')"><i class="ti ti-mail" aria-hidden="true"></i>Generate cover letter ↗</button>
+    <button class="btn-secondary" onclick="sendPrompt('What else can I add to strengthen Alexandre\'s EVA portfolio?')"><i class="ti ti-sparkles" aria-hidden="true"></i>Strengthen this portfolio ↗</button>
+  </div>
+</div>
